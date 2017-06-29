@@ -25,7 +25,6 @@ if(false === regex_extract.test(pattern_search)){ console.log(args[1], "does not
 
 //ok to extract and build actual-regex
 pattern_search = pattern_search.match(regex_extract);
-console.log(pattern_search);
 pattern_search = new RegExp(pattern_search[1], (pattern_search[2] || "")); //body and modifiers
 
 content = fs.readFileSync(file,{encoding: "ascii"});
@@ -34,6 +33,7 @@ content = content.replace(pattern_search, pattern_replace);
 parsed  = path.parse(file);
 fs.writeFileSync(file, content, {flag:"w", encoding:"ascii"}); //overwrite
 /*
+//don't overwrite.
 fs.writeFileSync( parsed.dir + "/" + parsed.name + "_fixed" + parsed.ext
                 , content
                 , {flag:"w", encoding:"ascii"}

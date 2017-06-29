@@ -24,6 +24,7 @@ goto EXIT
 :EXIT
 
 :: for search pattern you can use any javascript regex
+::  L1xcIi9n  is  /\\\\"/g
 ::  L1wiL2c=  is  /\\\"/g
 ::  L2EvZw==  is  /a/g
 ::  L2Ev      is  /a/
