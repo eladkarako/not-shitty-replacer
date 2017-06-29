@@ -1,0 +1,3 @@
+index.cmd 1.txt "L2EvZw==" ""
+
+is really like read file, ... .replace(/a/g, ""), back to file.
