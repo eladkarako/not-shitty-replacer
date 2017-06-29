@@ -32,7 +32,10 @@ content = fs.readFileSync(file,{encoding: "ascii"});
 content = content.replace(pattern_search, pattern_replace);
 
 parsed  = path.parse(file);
+fs.writeFileSync(file, content, {flag:"w", encoding:"ascii"}); //overwrite
+/*
 fs.writeFileSync( parsed.dir + "/" + parsed.name + "_fixed" + parsed.ext
                 , content
                 , {flag:"w", encoding:"ascii"}
                 );
+*/
